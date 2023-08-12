@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+/* Reset and base styles  */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Links */
+a:hover  {
+    text-decoration: none;
+}
+/* Common */
+aside, nav, footer, header, section, main {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+img {
+    vertical-align: top;
+}
+img, svg {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+address {
+    font-style: normal;
+}
+button {
+    color: inherit;
+    background-color: transparent;
+}
+/*------------------------------*/
+:root {
+    --background-color: #050505;
+    --text-color: #FFFFFF;
+    --extra-background-color: #2F303B;
+    --button-color: #D0EA59;
+
+    --text-font-weight: 400;
+    --title-font-weight: 700;
+
+    --normal-font-size: 16px;
+    --small-mob-font-size: 14px;
+    --big-font-size: 18px;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.change {
+    display: none;
+}
+
+/*------------------------------HEADER*/
+header::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: url("../svg/background-mob.svg") no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+header > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header span {
+    color: var(--button-color);
+     font-weight: var(--title-font-weight);
+     font-size: 18px;
+     margin: 30px;
+ }
+.l-box {
+    background: var(--extra-background-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.l-box div {
+    display: flex;
+}
+.menu {
+    width: 40px;
+    height: 30px;
+    margin: 30px;
+    cursor: pointer;
+}
+.open {
+    background: url("../svg/burger.svg") no-repeat;
+}
+.close {
+    background: url("../svg/close.svg") no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.navigation-list {
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--background-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navigation-list ul {
+    list-style: none;
+    margin-top: 100px;
+}
+.navigation-list li {
+    color: var(--button-color);
+    font-weight: var(--title-font-weight);
+    font-size: var(--big-font-size);
+    line-height: 32px;
+    padding: 15px 30px;
+    margin: 30px 25px 60px 25px;
+    cursor: pointer;
+}
+.navigation-list li:hover {
+    background: var(--button-color);
+    color: var(--extra-background-color);
+    border-radius: 4px;
+}
+.clientWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.clientWrap button {
+    width: 250px;
+    font-size: var(--small-mob-font-size);
+    font-weight: var(--title-font-weight);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid var(--button-color);
+    background: var(--extra-background-color);
+    border-radius: 4px;
+}
+.clientWrap button:hover {
+    background: var(--button-color);
+    color: var(--background-color);
+}
+
+/*------------------------------MAIN*/
+main {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    margin-top: 10px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+img:first-child {
+    margin-top: 30px;
+    border-radius: 8px;
+}
+h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: var(--title-font-weight);
+    text-align: start;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 38px;
+    line-height: 64px;
+    font-weight: var(--title-font-weight);
+    text-align: start;
+    margin: 15px 0;
+}
+h3 {
+    font-weight: var(--title-font-weight);
+    font-size: 32px;
+    line-height: 64px;
+    text-align: start;
+}
+main ul, ol {
+    text-align: start;
+    margin-bottom: 15px;
+}
+article > ul, ol {
+    margin-left: 20px;
+}
+li {
+    padding: 8px;
+}
+a {
+    color: var(--button-color);
+}
+p {
+    margin-bottom: 15px;
+    line-height: 24px;
+    text-align: start;
+}
+.extra-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extra-menu li {
+    font-weight: var(--title-font-weight);
+    color: var(--background-color);
+    background: var(--button-color);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 30px;
+}
+
+/*------------------------------TABLES*/
+table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    padding: 0 15px 15px 15px;
+}
+tr {
+    display: flex;
+    background: var(--background-color);
+}
+tr:nth-child(2n+1) {
+    background: var(--extra-background-color);
+    border-radius: 10px;
+}
+td {
+    word-wrap: break-word;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+.one {
+    font-weight: var(--title-font-weight);
+}
+.str {
+    flex-wrap: wrap;
+}
+.str td:first-child {
+    min-width: 100%;
+    text-align: center;
+}
+.four-tabl td {
+    width: 33%;
+}
+.three-tabl td {
+    width: 50%;
+}
+.two-tabl td {
+    width: 100%;
+}
+.upBTN {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #FFFFFF;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    border-radius: 50%;
+    background: rgba(94, 93, 88, 0.55);
+}
+.upBTN:hover {
+    background: rgba(208, 234, 89, 0.7);
+}
+
+/*------------------------------FOOTER*/
+footer {
+    background: var(--extra-background-color);
+    margin-top: 80px;
+}
+footer p {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 30px 15px;
+    text-align: center;
+}
+
+@media (min-width: 850px) {
+    .change {
+        display: flex;
+    }
+
+    /*------------------------------HEADER*/
+    header {
+        background: var(--extra-background-color);
+    }
+    header::after {
+        min-width: 100%;
+        height: 100%;
+        background: url("../svg/background-desk.svg") no-repeat;
+        top: -40px;
+        left: 0;
+        background-size: cover;
+    }
+    header > div {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 20px;
+    }
+    .mobi {
+        min-width: 50%;
+        border-bottom: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header span {
+        margin: 25px;
+        width: auto;
+    }
+    .navigation-list {
+        min-width: auto;
+        background: none;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+    }
+    .navigation-list ul {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+    }
+    .navigation-list li {
+        color: var(--text-color);
+        font-size: var(--normal-font-size);
+        padding: 0;
+        margin: 30px;
+    }
+    .navigation-list li:hover {
+        background: none;
+        color: var(--text-color);
+    }
+    .l-box {
+        display: none;
+    }
+    .close {
+        display: none;
+    }
+    .clientWrap {
+        flex-direction: row;
+        margin: 0;
+    }
+    .clientWrap button {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 13px 25px 13px 0;
+    }
+
+    /*------------------------------MAIN*/
+    main {
+        margin: 0 40px;
+    }
+    main > div {
+        max-width: 1150px;
+    }
+    .float {
+        max-width: 50%;
+        margin-bottom: 40px;
+    }
+    .right {
+        float: right;
+        margin-left: 20px;
+    }
+    .left {
+        float: left;
+        margin-right: 20px;
+    }
+    .extra-menu-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .extra-menu ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 40px;
+    }
+    .extra-menu li {
+        width: auto;
+        margin: 5px 10px;
+    }
+
+
+    /*------------------------------TABLES*/
+    table {
+        padding: 0 30px 30px;
+    }
+    tr {
+        font-size: var(--big-font-size);
+        justify-content: center;
+    }
+    .four-tabl td {
+        width: 25%;
+    }
+    .three-tabl td {
+        width: 33%;
+    }
+    .two-tabl td {
+        width: 50%;
+    }
+    .str td:first-child {
+        min-width: 25%;
+        padding-left: 0;
+        padding-top: 0;
+    }
+}
+

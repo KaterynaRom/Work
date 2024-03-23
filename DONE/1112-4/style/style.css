@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Reset and base styles  */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Links */
+a:hover  {
+    text-decoration: none;
+}
+/* Common */
+aside, nav, footer, header, section, main {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+img, svg {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+address {
+    font-style: normal;
+}
+button {
+    border-radius: 3px;
+    color: inherit;
+    background-color: transparent;
+}
+/*------------------------------*/
+
+:root {
+    --background-color: #000000;
+    --text-color: #FFF;
+    --button-bg: #EE2;
+    --border-left: #EE2;
+
+    --text-font-weight: 400;
+    --header-font-weight: 500;
+    --title-font-weight: 700;
+
+    --text-fs: 16px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--text-font-weight);
+    font-size: var(--text-fs);
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+button {
+    color: var(--background-color);
+    text-transform: uppercase;
+    font-weight: var(--header-font-weight);
+    border-radius: 8px;
+    background: var(--button-bg);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid var(--button-bg);
+}
+
+/*------------------------------HEADER*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    background: var(--background-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+header > div {
+    font-weight: var(--header-font-weight);
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header span {
+    font-weight: var(--header-font-weight);
+    margin-left: 20px;
+}
+.head-block {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+.svg-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+}
+.open-modal, .close-modal {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    cursor: pointer;
+    background: url("../svg/burger.svg") no-repeat center;
+    background-size: contain;
+}
+.close-modal {
+    background: url("../svg/close.svg") no-repeat center;
+    background-size: contain;
+}
+.delete-this {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    height: 320px;
+    z-index: 5;
+    padding-top: 20px;
+    background: var(--background-color);
+    align-items: center;
+}
+nav ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+nav li {
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+nav li:hover {
+    color: var(--button-bg);
+}
+.auth-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.auth-btns button:last-child {
+    background: none;
+    color: var(--button-bg);
+    margin-left: 15px;
+}
+
+/*------------------------------MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.main-blur {
+    background: rgba(0, 0, 0, 0.50);
+    filter: blur(1px);
+    z-index: -1;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article > div {
+    width: 100%;
+}
+.extra-img {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: url("../img/extra-bg-img.jpg") no-repeat center;
+    background-size: cover;
+    border: 4px dashed #E8EF1D;
+}
+.first-post  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+    background: url("../img/sec-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+.first-post > div {
+    max-width: 1200px;
+}
+.first-post > div > div {
+    display: flex;
+    flex-direction: column;
+}
+.cards-little > div {
+    display: flex;
+    padding: 24px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 4px dashed #E8EF1D;
+    justify-content: space-evenly;
+    align-items: center;
+    background: url("../img/extra-bg-img.jpg") no-repeat center;
+    background-size: cover;
+}
+.cards-little > div > div {
+    width: 45px;
+    height: 45px;
+    background: url("../svg/item.svg") no-repeat center;
+    background-size: cover;
+}
+.cards-little p {
+    padding-left: 25px;
+    margin-bottom: 0;
+    width: 70%;
+    font-weight: var(--header-font-weight);
+    border-left: 3px solid var(--text-color);
+}
+.text-wrap {
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+    padding: 30px 16px;
+}
+.extra-bg {
+    background: url("../img/sec-bg.jpg");
+    background-size: cover;
+}
+.extra-bg h2 {
+    color: var(--button-bg);
+}
+.border {
+    border-radius: 10px;
+    border: 1px solid #3DB743;
+    padding: 20px 16px;
+    margin: 30px 0;
+}
+.split {
+    width: 100vw;
+    height: 300px;
+    background: url("../img/sep.jpg") no-repeat center;
+    background-size: cover;
+}
+.img-bg {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: url("../img/sec-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+figure {
+    margin-bottom: 40px;
+}
+h1, h2, h3 {
+    font-weight: var(--title-font-weight);
+    text-align: start;
+    margin: 20px 0;
+}
+h1 {
+    width: 80%;
+    font-size: 36px;
+    line-height: 58px;
+    color: var(--button-bg);
+}
+h2, h3 {
+    min-width: 100%;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 32px;
+    margin-top: 10px;
+}
+h3 {
+    padding: 30px;
+    font-size: 32px;
+    border: 4px dashed var(--button-bg);
+    background: url("../img/extra-bg-img.jpg") center no-repeat;
+    background-size: cover;
+}
+h4 {
+    font-weight: var(--title-font-weight);
+    width: 47%;
+}
+main ul, ol {
+    text-align: start;
+    margin: 40px 0 40px 15px;
+    padding-left: 50px;
+    border-left: 2px solid var(--border-left);
+}
+li {
+    padding: 7px 7px 7px 15px;
+}
+a {
+    color: var(--button-bg);
+}
+p {
+    margin-bottom: 16px;
+    line-height: 18px;
+    text-align: start;
+}
+img {
+    border-radius: 30px;
+}
+.center p, .center h2 {
+    text-align: center;
+}
+.center p {
+    font-weight: var(--header-font-weight);
+    margin-bottom: 25px;
+}
+
+/*------------------------------TABLES*/
+table {
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--text-color);
+    width: 100%;
+    margin: 16px auto 0;
+}
+td:not(tr:last-child td):last-child {
+    border-bottom: 1px solid var(--button-bg);
+}
+tr:not(tr:first-child) {
+    display: grid;
+    word-break: break-all;
+}
+td {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+tr:first-child td {
+    background: var(--button-bg);
+    color: var(--background-color);
+}
+td {
+    margin: 0 4px;
+    padding: 16px 0;
+    text-align: center;
+}
+tr {
+    grid-template-columns: repeat(1, 1fr);
+}
+.main-btn {
+    font-size: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/*------------------------------FOOTER*/
+footer {
+    width: 100%;
+    background: url("../img/sec-bg.jpg");
+}
+footer p {
+    opacity: 0.5;
+    font-size: 12px;
+    margin: 30px 15px;
+    text-align: center;
+}
+
+@media (min-width: 1150px) {
+    body {
+        font-size: var(--text-fs);
+    }
+    .delete-this {
+        display: flex;
+        align-items: center;
+    }
+    button {
+        padding: 14px 30px;
+    }
+
+    /*------------------------------HEADER*/
+     .svg-head {
+        display: none;
+     }
+     nav {
+         height: auto;
+         width: auto;
+         position: relative;
+         background: none;
+         flex-direction: row;
+         padding: 0;
+         top: 0;
+     }
+     nav ul {
+         flex-direction: row;
+         margin: 0;
+     }
+    nav li {
+        width: auto;
+        border: none;
+        margin-bottom: 0;
+    }
+     nav span {
+         display: none;
+     }
+    .head-block {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .mob-v {
+        display: none;
+    }
+
+    /*------------------------------MAIN*/
+
+    .first-post > div {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 40px;
+        overflow: hidden;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .first-post > div > div {
+        width: 40%;
+        border-radius: 0 0 80px 20px;
+
+    }
+    .first-post figure {
+        width: 55%;
+    }
+    .text-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 16px;
+    }
+    .text-wrap > div {
+        max-width: 1200px;
+    }
+    .border {
+        padding: 40px;
+    }
+    .extra-img {
+        padding: 30px;
+    }
+    .cards-little {
+        display: flex;
+        justify-content: center;
+    }
+    .cards-little > div {
+        width: calc((100% - 25px)/2);
+    }
+    .cards-little > div:last-child {
+        margin-left: 25px;
+    }
+    .cards-little > div > div {
+        width: 75px;
+        height: 75px;
+    }
+    h1, h2 {
+        font-size: 40px;
+    }
+
+    /*------------------------------TABLES*/
+    tr:first-child {
+        display: grid;
+        word-break: break-all;
+    }
+    .tab2 tr {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tab3 tr {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .tab4 tr {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    td:not(tr:last-child td):last-child {
+        border-bottom: none;
+    }
+}
+

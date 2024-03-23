@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;600&display=swap');
+/* Reset and base styles  */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Links */
+a:hover  {
+    text-decoration: none;
+}
+/* Common */
+aside, nav, footer, header, section, main {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+img {
+    vertical-align: top;
+}
+img, svg {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+address {
+    font-style: normal;
+}
+button {
+    color: inherit;
+    background-color: transparent;
+}
+/*------------------------------*/
+
+:root {
+    --bg-color: linear-gradient(174deg, #8E2DFE 0%, #C045FE 27.6%, #7F26FE 50.53%, #CF34FE 76.04%, #7A25AA 100%);
+    --nav-bg: #3C3E57;
+    --btn-border: #EE64FF;
+    --btn-bg: #D046FF;
+    --hover-btn-bg: #E7A1FF;
+    --extra-btn-bg: #282A3A;
+    --article-btn-bg: #373950;
+    --hover-article-btn-bg: #6E7085;
+    --text-color: #FFF;
+    --title-color: #07CCFF;
+    --footer-color: #720BA2;
+
+    --text-font-weight: 400;
+    --title-font-weight: 600;
+
+    --normal-fs: 16px;
+    --table-fs: 18px;
+}
+body {
+    font-family: 'Afacad', sans-serif;
+    font-size: var(--normal-fs);
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
+}
+.nOnE {
+    display: none;
+}
+body > div {
+    background: url("../svg/top-bg.svg") top center no-repeat;
+    background-size: contain;
+}
+
+/*------------------------------HEADER*/
+header {
+    width: 100%;
+}
+header > div {
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header span {
+    color: var(--title-color);
+    font-size: 18px;
+    margin: 30px;
+    position: relative;
+    padding-left: 35px;
+}
+header span::before {
+    content: url("../svg/logo.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.modalka {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.modalka div {
+    display: flex;
+}
+.modal {
+    width: 56px;
+    height: 56px;
+    margin: 15px 20px;
+    cursor: pointer;
+}
+.op-modal {
+    background: url("../svg/burger.svg") no-repeat;
+    background-size: contain;
+}
+.cl-modal {
+    background: url("../svg/close.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+nav {
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background: var(--nav-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+nav ul {
+    list-style: none;
+    margin: 100px 20px 20px 20px;
+    position: relative;
+}
+nav li {
+    font-weight: var(--title-font-weight);
+    font-size: var(--table-fs);
+    line-height: 32px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    margin: 5px 5px 100px 5px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+nav li:last-child {
+    margin-bottom: 5px;
+}
+nav li:hover {
+    background: var(--btn-bg);
+}
+.registr-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+button {
+    width: 250px;
+    font-weight: var(--title-font-weight);
+    border-radius: 16px;
+    padding: 10px 24px;
+    cursor: pointer;
+    background: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+}
+button:hover {
+    background: var(--hover-btn-bg);
+    border: 1px solid var(--text-color);
+}
+.registr-us {
+    margin: 0 15px;
+    padding: 5px;
+}
+.registr-us button {
+    width: 100%;
+}
+.registr-us button:last-child {
+    background: var(--extra-btn-bg);
+    border-color: var(--extra-btn-bg);
+    margin-top: 20px;
+}
+.registr-us button:last-child:hover {
+    background: none;
+}
+nav .registr-us {
+    margin-bottom: 20px;
+    border: none;
+}
+
+/*------------------------------MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+}
+article {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+article > figure img {
+    border-radius: 10px;
+}
+figure img {
+    margin-top: 30px;
+    border-radius: 10px;
+}
+article > figure:first-child img {
+    border-radius: 0;
+}
+h1, h2, h3 {
+    color: var(--title-color);
+    line-height: 130%;
+    text-align: start;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 38px;
+}
+h3 {
+    font-size: 32px;
+}
+main ul, ol {
+    text-align: start;
+    margin-bottom: 15px;
+}
+article > ul, ol {
+    margin-left: 20px;
+}
+li {
+    padding: 8px;
+}
+a {
+    color: var(--title-color);
+}
+p {
+    font-weight: var(--text-font-weight);
+    margin-bottom: 12px;
+    line-height: 180%;
+    text-align: start;
+}
+.center-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+article button {
+    background: var(--article-btn-bg);
+    width: auto;
+    margin: 24px 0;
+    text-transform: uppercase;
+    border: none;
+}
+article button:hover {
+    background: var(--hover-article-btn-bg);
+    border: none;
+}
+.cartki {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartki > div {
+    padding: 16px;
+    max-width: 380px;
+    margin: 30px 10px;
+    border-radius: 20px;
+    background: var(--article-btn-bg);
+}
+.cartki > div > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cartki h3 {
+    color: var(--text-color);
+    margin: 16px 0;
+    font-weight: var(--title-font-weight);
+}
+.cartki img {
+    border-radius: 0;
+}
+.cartki figure, .cartki img {
+    margin: 0;
+}
+
+    /*------------------------------TABLES*/
+table {
+    width: 100%;
+    margin: 30px 0;
+}
+tr {
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 26px;
+    margin-bottom: 8px;
+}
+tr td:first-child {
+    min-width: 100%;
+    text-align: center;
+    font-weight: var(--title-font-weight);
+    font-size: var(--table-fs);
+}
+tr:nth-child(2n+1) {
+    background: var(--article-btn-bg);
+}
+td {
+    position: relative;
+    word-wrap: break-word;
+    padding: 15px 5px;
+    overflow: hidden;
+}
+td:first-child {
+    font-weight: var(--title-font-weight);
+}
+.four-f td {
+    width: 33%;
+}
+.three-t td {
+    width: 50%;
+}
+.two-t td {
+    width: 100%;
+}
+.upBup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #FFFFFF;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 85px;
+    right: 30px;
+    border-radius: 50%;
+    background: rgba(94, 93, 88, 0.55);
+}
+.upBup:hover {
+    background: var(--btn-bg);
+}
+
+/*------------------------------FOOTER*/
+footer {
+    background: var(--footer-color);
+}
+footer p {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 30px 15px;
+    text-align: center;
+    margin: 0;
+}
+
+@media (min-width: 1000px) {
+    .nOnE {
+        display: flex;
+    }
+
+    /*------------------------------HEADER*/
+    header {
+        display: flex;
+        justify-content: center;
+        border-bottom: none;
+        margin-top: 15px;
+    }
+    header > div {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .H-box {
+        border-bottom: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header span {
+        margin: 25px;
+        width: auto;
+    }
+    nav {
+        min-width: auto;
+        background: none;
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav .registr-us {
+        display: none;
+    }
+    nav > div {
+        background: none;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 2px;
+    }
+    nav li {
+        font-weight: var(--text-font-weight);
+        color: var(--text-color);
+        font-size: var(--normal-fs);
+        padding: 10px 25px;
+        margin: 0;
+    }
+    nav li:last-child {
+        margin-bottom: 0;
+    }
+    nav li:hover {
+        background: none;
+        text-decoration: underline;
+        color: var(--title-color);
+    }
+    .modalka {
+        display: none;
+        border-bottom: none;
+    }
+    .cl-modal {
+        display: none;
+    }
+    .registr-us {
+        flex-direction: row;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+    .registr-us button {
+        width: 100%;
+    }
+    .registr-us button:last-child {
+        margin-left: 15px;
+        margin-top: 0;
+    }
+
+    /*------------------------------MAIN*/
+    article {
+        max-width: 1150px;
+        margin: 0 40px;
+    }
+    h1 {
+        margin-bottom: 24px;
+        margin-top: 40px;
+    }
+    .alone-block {
+        display: flex;
+        align-items: center;
+    }
+    .alone-block figure {
+        min-width: 300px;
+        width: auto;
+    }
+    .alone-block > div {
+        width: 70%;
+        margin-left: 30px;
+    }
+    .cartki {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cartki > div {
+        width: calc(100%/2 - 30px);
+        max-width: none;
+    }
+    .mobV {
+        display: none;
+    }
+
+    /*------------------------------TABLES*/
+    table {
+        margin: 50px 0;
+        font-size: var(--table-fs);
+        padding: 0 30px 30px;
+    }
+    tr {
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+    td {
+        padding: 10px 5px;
+        margin: 10px;
+    }
+    .four-f td {
+        width: calc(25% - 20px);
+    }
+    .three-t td {
+        width: calc(33% - 20px);
+    }
+    .two-t td {
+        width: calc(50% - 20px);
+    }
+    tr td:first-child {
+        font-size: var(--table-fs);
+        min-width: 22%;
+    }
+    td:not(td:last-child) {
+        border-right: 1px solid var(--text-color);
+    }
+}
+

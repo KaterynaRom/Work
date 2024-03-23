@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+/* Reset and base styles  */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Links */
+a:hover  {
+    text-decoration: none;
+}
+/* Common */
+aside, nav, footer, header, section, main {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+img, svg {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+address {
+    font-style: normal;
+}
+button {
+    border-radius: 3px;
+    color: inherit;
+    background-color: transparent;
+}
+/*------------------------------*/
+
+:root {
+    --text-color: #FFF;
+    --extra-text: #000;
+    --button-bg: #80B341;
+    --table-bg: #171D26;
+    --table-border: #EEEAF5;
+    --footer-bg: #3B5C36;
+    --bg1-poster: linear-gradient(180deg, rgba(128, 179, 65, 0.24) -15.73%, rgba(255, 255, 255, 0.00) 100%), #171D26;
+    --bg2: linear-gradient(180deg, rgba(128, 179, 65, 0.14) -15.73%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(0deg, #2F502E 0%, #2F502E 100%), #181F29;
+    --bg3: linear-gradient(180deg, rgba(128, 179, 65, 0.24) -15.73%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(0deg, #171D26 0%, #171D26 100%), #FFF;
+
+    --text-font-weight: 400;
+    --header-font-weight: 600;
+    --title-font-weight: 800;
+
+    --mob-text-fs: 16px;
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: var(--text-font-weight);
+    font-size: var(--mob-text-fs);
+    color: var(--text-color);
+    background: var(--bg1-poster);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+body > div {
+    background: url("../img/bg-conva.png");
+}
+button {
+    font-weight: var(--header-font-weight);
+    border-radius: 10px;
+    background: var(--button-bg);
+    padding: 16px 24px;
+    cursor: pointer;
+}
+
+/*------------------------------HEADER*/
+header {
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header > div {
+    font-weight: var(--header-font-weight);
+    max-width: 1300px;
+    width: calc(100vw - 20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header span {
+    font-weight: var(--header-font-weight);
+    margin-left: 20px;
+}
+.Header-w {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+.SVG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+}
+.openModal, .closeModal {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    cursor: pointer;
+    background: url("../svg/burger.svg") no-repeat center;
+    background-size: contain;
+}
+.closeModal {
+    background: url("../svg/close.svg") no-repeat center;
+    background-size: contain;
+}
+.nonE {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 88px;
+    right: 0;
+    width: 100%;
+    height: 320px;
+    z-index: 5;
+    padding-top: 20px;
+    background: var(--button-bg);
+    align-items: center;
+}
+nav ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+nav li {
+    width: 80%;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    text-align: end;
+    border: 1px solid transparent;
+}
+nav li:hover {
+    border-bottom: 1px solid var(--text-color);
+}
+nav li span {
+    content: url("../svg/arrow.svg");
+    margin-left: 10px;
+}
+.LogInEr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.LogInEr button:last-child {
+    background: none;
+    margin-left: 15px;
+}
+
+/*------------------------------MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-blur {
+    background: rgba(0, 0, 0, 0.50);
+    filter: blur(1px);
+    z-index: -1;
+}
+article, .center, .sep-green > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article > div {
+    width: 100%;
+}
+.first-banner {
+    width: 100vw;
+    background: var(--bg1-poster);
+}
+.first-banner > div {
+    width: 100%;
+    padding: 160px 16px;
+    background: url("../img/bg-conva.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first-banner > div > div {
+    width: calc(100% - 32px);;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16px;
+}
+.sep-green {
+    min-width: calc(100vw + 15%);
+    background: var(--button-bg);
+    font-size: 12px;
+}
+.sep-green > div > div {
+    content: url("../svg/btn-dec.svg");
+    cursor: pointer;
+}
+.Cards-items > div {
+    padding: 50px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Wrapper-content {
+    background: var(--bg1-poster);
+    overflow: hidden;
+    z-index: 2;
+}
+.Wrapper-content > div {
+    background: url("../img/bg-conva.png");
+}
+.Wrapper-content > div > div {
+    padding: 30px 16px;
+}
+.sep-block {
+    width: 100vw;
+    height: 300px;
+    background: url("../img/sep.png") no-repeat center;
+    background-size: cover;
+}
+figure {
+    margin-bottom: 50px;
+}
+h1, h2, h3 {
+    font-weight: var(--title-font-weight);
+    text-align: start;
+    position: relative;
+    margin-bottom: 20px;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+}
+h1::before {
+    content: url("../svg/ellipse.svg");
+    position: absolute;
+    top: -140px;
+    left: -60px;
+}
+h2 {
+    position: relative;
+    font-size: 24px;
+}
+h1 span, h2 span {
+    position: relative;
+    color: var(--button-bg);
+}
+h1 span::after, h2::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 10px;
+    background: url("../svg/green-line.svg") no-repeat;
+    background-size: contain;
+    bottom: -5px;
+    left: 25px;
+    max-width: 300px;
+}
+h2::after {
+    background: url("../svg/white-line.svg") no-repeat;
+    background-size: contain;
+}
+h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+main ul, ol {
+    text-align: start;
+    margin: 40px 0 40px 15px;
+    padding-left: 30px;
+}
+li {
+    padding: 7px 7px 7px 15px;
+}
+a {
+    color: var(--button-bg);
+}
+p {
+    margin-bottom: 16px;
+    text-align: start;
+    line-height: 150%;
+}
+.canva {
+    background: url("../img/bg-conva.png");
+}
+.center p, .center h2 {
+    text-align: center;
+}
+.center {
+    border-radius: 30px;
+}
+.bg2 {
+    background: var(--bg2);
+}
+.bg3 {
+    background: var(--bg3);
+}
+.center > div {
+    padding: 40px 16px;
+}
+.border {
+    padding: 40px 16px;
+    border-radius: 10px;
+    border: 2px solid var(--button-bg);
+}
+
+/*------------------------------TABLES*/
+table {
+    width: 100%;
+    margin: 30px 0;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+td {
+    background: var(--text-color);
+    color: var(--extra-text);
+    text-align: center;
+    word-wrap: break-word;
+    padding: 12px;
+    border: 1px solid var(--table-border);
+}
+th {
+    word-wrap: break-word;
+    font-weight: var(--header-font-weight);
+    background: var(--table-bg);
+    padding: 15px;
+}
+th, td {
+    max-width: 70px;
+    text-align: start;
+    border: 1px solid var(--table-border);
+}
+.t4 td, .table4 th {
+    width: calc(100% / 4);
+    max-width: 80px;
+}
+.t3 td, .table3 th {
+    width: calc(100% / 3);
+}
+.t2 td, .table2 th {
+    width: 50%;
+}
+.main-Btn {
+    font-size: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/*------------------------------FOOTER*/
+footer {
+    background: var(--footer-bg);
+    padding: 30px 15px;
+}
+footer p {
+    opacity: 0.5;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (min-width: 1150px) {
+
+    .nonE {
+        display: flex;
+        align-items: center;
+    }
+
+    /*------------------------------HEADER*/
+     .SVG {
+        display: none;
+     }
+     nav {
+         height: auto;
+         width: auto;
+         position: relative;
+         background: none;
+         flex-direction: row;
+         padding: 0;
+         top: 0;
+         margin-right: 25px;
+     }
+     nav ul {
+         flex-direction: row;
+         margin: 0;
+     }
+     .Header-w > span {
+         margin-right: 50px;
+     }
+    nav li {
+        width: auto;
+        margin: 0 6px;
+        border-right: 1px solid var(--text-color);
+        border-left: 1px solid var(--text-color);
+    }
+    nav li:hover {
+        border-bottom-color: transparent;
+        color: var(--button-bg);
+    }
+    .Header-w {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navigator-block {
+        display: flex;
+        align-items: center;
+    }
+    .Mobi {
+        display: none;
+    }
+
+    /*------------------------------MAIN*/
+
+    article figure {
+        margin-bottom: 100px;
+    }
+    .Wrapper-content > div, .first-banner, .bg2 > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Wrapper-content > div > div, .first-banner > div > div {
+        max-width: 1300px;
+        padding: 60px 16px;
+        width: calc(100% - 32px);
+    }
+    .first-banner > div > div {
+        padding: 0;
+    }
+    .bg2 > div {
+        padding: 40px;
+    }
+    .Cards-items {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .Cards-items > div {
+        width: calc((100% - 25px)/2);
+    }
+    .Cards-items > div:last-child {
+        margin-left: 25px;
+    }
+    .border {
+        padding: 40px 30px;
+    }
+    h1 {
+        width: 50%;
+        font-size: 70px;
+    }
+    h1::before {
+        top: -240px;
+        left: -250px;
+    }
+    h1 span::after, h2::after {
+        width: 500px;
+    }
+    h2 {
+        font-size: 54px;
+    }
+
+    /*------------------------------TABLES*/
+    table {
+        padding: 0 30px 30px;
+    }
+    th {
+        padding: 20px;
+    }
+    td {
+        padding: 20px;
+    }
+}
+

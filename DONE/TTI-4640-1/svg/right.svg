@@ -1,0 +1,12 @@
+<svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="left">
+<rect id="Rectangle 14" y="-0.000244141" width="24" height="36" rx="8" fill="url(#paint0_linear_1_375)"/>
+<path id="Polygon 4" d="M16 17L8.5 21.3301L8.5 12.6699L16 17Z" fill="#DADADA"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1_375" x1="12" y1="-0.000244141" x2="12" y2="35.9998" gradientUnits="userSpaceOnUse">
+<stop stop-color="#411DB8"/>
+<stop offset="1" stop-color="#43317D"/>
+</linearGradient>
+</defs>
+</svg>

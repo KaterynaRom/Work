@@ -1,0 +1,16 @@
+<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="up">
+<path id="up_2" d="M18.291 10.975L23.491 19.975C24.291 21.275 23.591 22.375 22.091 22.375H11.691C10.191 22.375 9.59103 21.275 10.291 19.975L15.491 10.975C16.291 9.675 17.491 9.675 18.291 10.975Z" fill="url(#paint0_linear_64_713)"/>
+<path id="Rectangle 787 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M29 2H4C2.89543 2 2 2.89543 2 4V29C2 30.1046 2.89543 31 4 31H29C30.1046 31 31 30.1046 31 29V4C31 2.89543 30.1046 2 29 2ZM4 0C1.79086 0 0 1.79086 0 4V29C0 31.2091 1.79086 33 4 33H29C31.2091 33 33 31.2091 33 29V4C33 1.79086 31.2091 0 29 0H4Z" fill="url(#paint1_linear_64_713)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_64_713" x1="16.9129" y1="10" x2="16.9129" y2="22.375" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFB155"/>
+<stop offset="1" stop-color="#C45719"/>
+</linearGradient>
+<linearGradient id="paint1_linear_64_713" x1="16.5" y1="0" x2="16.5" y2="33" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFB155"/>
+<stop offset="1" stop-color="#C45719"/>
+</linearGradient>
+</defs>
+</svg>

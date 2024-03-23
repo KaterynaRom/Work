@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+/* Reset and base styles  */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Links */
+a:hover  {
+    text-decoration: none;
+
+}
+/* Common */
+aside, nav, footer, header, section, main {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+img {
+    vertical-align: top;
+}
+img, svg {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+address {
+    font-style: normal;
+}
+button {
+    color: inherit;
+    background-color: transparent;
+}
+/*------------------------------*/
+:root {
+    --background-color: #06062B;
+    --text-color: #F7F8FF;
+    --extra-text-color: #1B1B1B;
+    --header-color: #FFF;
+    --btn-color: #FF0FCA;
+    --btn-extra-color: #FF5FDC;
+    --btn-text: #FF96E8;
+    --shadow: 0 4px 16px 0 rgba(253, 0, 197, 0.79);
+    --table-bg-color: #FFB2F3;
+    --logo-bg-color: rgba(144, 144, 144, 0.12);
+    --header-bg: #03032F;
+
+    --text-font-weight: 400;
+    --title-font-weight: 700;
+
+    --big-font-size: 16px;
+    --normal-font-size: 14px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.none {
+    display: none;
+}
+
+/*------------------------------HEADER*/
+header {
+    color: var(--header-color);
+    background: var(--header-bg);
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.wr-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.head-tit {
+    display: flex;
+    align-items: center;
+}
+header span {
+    font-weight: var(--title-font-weight);
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 10px 5px;
+    padding: 8px 25px;
+    background: var(--logo-bg-color);
+}
+.menu-Item {
+    width: 36px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.opeN {
+    background: url("../svg/burger.svg") no-repeat center;
+}
+.closE {
+    background: url("../svg/close.svg") no-repeat center;
+}
+nav {
+    min-width: 100%;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    background: var(--background-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+nav::after {
+    content: "";
+    width: 100%;
+    height: 450px;
+    background: url("../img/nav.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+nav li {
+    width: 90%;
+    font-size: var(--big-font-size);
+    line-height: 32px;
+    padding: 16px 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+nav li:hover {
+    color: var(--btn-color);
+}
+.authInfo {
+    display: flex;
+    align-items: center;
+}
+.authInfo button {
+    background: var(--btn-color);
+    padding: 8px 13px;
+    font-weight: var(--title-font-weight);
+    margin: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 2px solid var(--btn-color);
+    border-radius: 8px;
+}
+.authInfo button:first-child {
+    background: none;
+    color: var(--btn-text);
+}
+.authInfo button:last-child:hover {
+    box-shadow: var(--shadow);
+    background: var(--btn-extra-color);
+    border-color: var(--btn-extra-color);
+}
+.authInfo button:first-child:hover {
+    color: var(--text-color);
+    background: var(--btn-extra-color);
+}
+
+    /*------------------------------MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+article {
+    margin: 10px 15px 0 15px;
+}
+main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+main figure:first-child {
+    padding-bottom: 10px;
+}
+img {
+    border-radius: 16px;
+}
+h1, h2, h3 {
+    font-weight: var(--title-font-weight);
+    text-align: start;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 20px;
+}
+main ul, ol {
+    text-align: start;
+    margin-bottom: 15px;
+}
+article > ul, ol {
+    margin-left: 20px;
+}
+li {
+    padding: 3px;
+}
+a {
+    color: var(--btn-color);
+}
+p {
+    font-size: var(--normal-font-size);
+    margin-bottom: 15px;
+    line-height: 24px;
+    text-align: start;
+}
+
+/*------------------------------TABLES*/
+table {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid var(--table-bg-color);
+}
+tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+tr:nth-child(2n+2) {
+    background: var(--table-bg-color);
+    color: var(--extra-text-color);
+}
+th {
+    width: 100%;
+    font-weight: var(--title-font-weight);
+}
+td, th {
+    word-wrap: break-word;
+    padding: 10px;
+}
+tr td:first-child {
+    min-width: 100%;
+    font-weight: var(--title-font-weight);
+    text-align: center;
+}
+.tab_4 td {
+    width: 33%;
+}
+.tab_3 td {
+    width: 50%;
+}
+.tab_2 td {
+    width: 100%;
+}
+.upppp {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 25px;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    border-radius: 50%;
+    background: rgba(94, 93, 88, 0.55);
+    cursor: pointer;
+}
+.upppp:hover {
+    background: var(--btn-color);
+}
+
+/*------------------------------FOOTER*/
+footer {
+    background: var(--header-bg);
+}
+footer p {
+    font-size: 12px;
+    margin: 30px 15px;
+    text-align: center;
+}
+
+@media (min-width: 850px) {
+    main {
+        background: url("../img/main-bg.png") top center no-repeat;
+        background-size: contain;
+    }
+    .none {
+        display: flex;
+    }
+
+    /*------------------------------HEADER*/
+    header span {
+        margin-right: 40px;
+    }
+    .wr-head {
+        justify-content: space-around;
+    }
+    .head-tit {
+        width: 55%;
+        justify-content: space-between;
+    }
+    .n-svg {
+        display: none;
+    }
+    nav {
+        min-width: auto;
+        background: none;
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav::after {
+        content: none;
+    }
+    nav ul {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+    nav li {
+        color: var(--text-color);
+        font-size: var(--big-font-size);
+        padding: 0;
+        margin: 30px 40px;
+        border: none;
+    }
+    .authInfo button {
+        width: 140px;
+    }
+    .authInfo {
+        margin-left: 20px;
+    }
+
+    /*------------------------------MAIN*/
+    main {
+        padding-top: 120px;
+    }
+    article {
+        max-width: 1200px;
+        margin: 20px 40px 0 40px;
+    }
+    main figure:first-child {
+        padding-bottom: 25px;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    p {
+        font-size: var(--big-font-size);
+    }
+
+    /*------------------------------TABLES*/
+    table {
+        padding: 0;
+        font-size: 18px;
+    }
+    th {
+        width: auto;
+    }
+    tr td:first-child {
+        font-weight: var(--text-font-weight);
+    }
+    td {
+        padding: 15px;
+    }
+    .tab_4 td, .tab_4 th {
+        width: 25%;
+    }
+    .tab_3 td, .tab_3 th {
+        width: 33%;
+    }
+    .tab_2 td, .tab_2 th {
+        width: 50%;
+    }
+    tr td:first-child {
+        min-width: 25%;
+        padding: 15px;
+    }
+}
+
